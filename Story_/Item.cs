@@ -1,66 +1,100 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
+
 
 namespace Story
 {
-    class Interaction
+     
+    abstract class Interaction
     {
         protected List<string> random_names = new List<string>();
         protected Random rnd = new Random();
-        protected string randn_0_W;
-        protected string randn_1_W;
-        protected string randn_2_W;
-        protected string randn_3_W;
-        protected string randn_4_W;
-        protected string randn_5_Br;
+        private  string str_;
+        public string randn_0_W 
+        {
+            get { return str_; }
+            set 
+            {
+                if (value == "гад")
+                {
+                    throw new IteractionException("Некорректное слово");
+                }
+                else 
+                {
+                    str_ = value;
+                }
+            }
+        }
+        public string randn_1_W { get; set; }
+        public string randn_2_W { get; set; }
+        public string randn_3_W { get; set; }
+        public string randn_4_W { get; set; }
+        public string randn_5_Br { get; set; }
+
+
+        public virtual string InteractionWithText() 
+        {
+            return base.ToString();    
+        }
+
+
 
     }
+    class IteractionException : ArgumentException
+    {
+        public IteractionException(string message) : base(message)
+        {
 
-    class Washbasin : Interaction
+        }
+    }
+    class Items:Interaction 
+        {
+            public Items()
+            {
+                random_names.Add("шикарный");
+                random_names.Add("прекрасный");
+                random_names.Add("богоподобный");
+                random_names.Add("гад");
+                random_names.Add("русского репа");
+                random_names.Add("клипа Rammstein - Mann Gegen Mann");
+                random_names.Add("Ламер");
+                random_names.Add("Умывальник");
+                random_names.Add("вероятно");
+                random_names.Add("может быть");
+                random_names.Add("точно");
+                random_names.Add("Whats up cousin");
+                random_names.Add("Yo Man");
+                //brush
+                random_names.Add("god damn, чисто, чисто");
+                random_names.Add("Ой возможно мы уже ничем не поможем");
+                //Soap
+                random_names.Add("Не юлило, и не мылило,");
+                random_names.Add("И юлило, и мылило,");
+
+                //Boy
+                random_names.Add("У мальчика вызвало возмущения почему его не мыли");
+                random_names.Add("и кусало, как оса.");
+                //Crocodyle
+                random_names.Add("проглотил");
+                random_names.Add("не проглотил");
+                random_names.Add("в универ скоро сессия");
+                random_names.Add("домой делай практички скоро сессия");
+                //Pie
+                random_names.Add("дружок-пирожок");
+                random_names.Add("дружок");
+                //boy
+                random_names.Add("нет спасибо");
+            }
+
+        }
+
+    class Washbasin : Items
     {
 
-        public Washbasin()
+        public Washbasin():base()
         {
-            random_names.Add("шикарный");
-            random_names.Add("прекрасный");
-            random_names.Add("богоподобный");
-            random_names.Add("гад");
-            random_names.Add("русского репа");
-            random_names.Add("клипа Rammstein - Mann Gegen Mann");
-            random_names.Add("Ламер");
-            random_names.Add("html-шик");
-            random_names.Add("вероятно");
-            random_names.Add("может быть");
-            random_names.Add("точно");
-            random_names.Add("Whats up cousin");
-            random_names.Add("Yo Man");
-            //brush
-            random_names.Add("god damn, чисто, чисто");
-            random_names.Add("Ой возможно мы уже ничем не поможем");
-            //Soap
-            random_names.Add("Не юлило, и не мылило,");
-            random_names.Add("И юлило, и мылило,");
-
-            //Boy
-            random_names.Add("У мальчика вызвало возмущения почему его не мыли");
-            random_names.Add("и кусало, как оса.");
-            //Crocodyle
-            random_names.Add("проглотил");
-            random_names.Add("не проглотил");
-            random_names.Add("в универ скоро сессия");
-            random_names.Add("домой делай практички скоро сессия");
-            //Pie
-            random_names.Add("дружок-пирожок");
-            random_names.Add("дружок");
-            //boy
-            random_names.Add("нет спасибо");
-
-
-
-
-
+        
         }
         public override string ToString()
         {
@@ -109,13 +143,13 @@ namespace Story
 
 
     }
-    class Brushes : Washbasin
+    class Brushes : Items
     {
 
         public Brushes() : base()
         {
         }
-        public string ToStringBrch_0()
+        public override string InteractionWithText()
         {
             List<string> tostringBrsh = new List<string>();
             tostringBrsh.Add(random_names[13]);
@@ -123,14 +157,15 @@ namespace Story
             randn_5_Br = tostringBrsh[rnd.Next(0, tostringBrsh.Count)];
             return randn_5_Br;
         }
+        
     }
 
-    class Soap : Washbasin
+    class Soap : Items
     {
         private string randstr_s;
         public Soap() : base()
         { }
-        public string ToStringS_0()
+        public override string InteractionWithText()
         {
             List<string> tostringS = new List<string>();
             tostringS.Add(random_names[15]);
@@ -138,6 +173,7 @@ namespace Story
             randstr_s = tostringS[rnd.Next(0, tostringS.Count)];
             return randstr_s;
         }
+        
         public string Answer_for_Boy()
         {
             string b_t;
@@ -155,11 +191,12 @@ namespace Story
 
 
     }
-    class Crocodyle : Washbasin
+    class Crocodyle : Items
     {
         public Crocodyle() : base()
         { }
-        public string ToStringC_0()
+        
+        public override string InteractionWithText()
         {
             List<string> tostringC = new List<string>();
             tostringC.Add(random_names[19]);
@@ -167,7 +204,6 @@ namespace Story
             string randstrC = tostringC[rnd.Next(0, tostringC.Count)];
 
             return randstrC;
-
         }
         public string ToStirngC_1()
         {

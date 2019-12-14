@@ -97,7 +97,17 @@ namespace Story
             Thread.Sleep(1500);
             Console.WriteLine("\t\tИ качает головой:");
             Thread.Sleep(1500);
-            Console.WriteLine($"\t\t«Ах ты, {washbasin.ToString()}, ах ты, {washbasin.ToString()}, Неумытый поросёнок!");
+            try
+            {
+                Console.WriteLine($"\t\t«Ах ты, {washbasin.ToString()}, ах ты, {washbasin.ToString()}, Неумытый поросёнок!");
+            }
+            catch (IteractionException ex) 
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"\t\terror: {ex.Message}");
+                Console.ResetColor();
+            }
+            
             Thread.Sleep(1500);
             Console.WriteLine();
             Console.WriteLine($"\t\tТы чернее {washbasin.ToString_1()}, полюбуйся на себя:");
@@ -148,13 +158,13 @@ namespace Story
             Thread.Sleep(1500);
             Console.WriteLine("\t\tИ давай меня тереть, приговаривать:");
             Thread.Sleep(1500);
-            Console.WriteLine($"\t\t«Моем, моем трубочиста {brushes.ToStringBrch_0()}!");
+            Console.WriteLine($"\t\t«Моем, моем трубочиста {brushes.InteractionWithText()}!");
             Thread.Sleep(1500);
             Console.WriteLine("\t\tБудет, будет трубочист Чист, чист, чист, чист!»");
             Thread.Sleep(1500);
             Console.WriteLine("\t\tТут и мыло подскочило и вцепилось в волоса,");
             Thread.Sleep(1500);
-            Console.WriteLine($"\t\t{soap.ToStringS_0()}");
+            Console.WriteLine($"\t\t{soap.InteractionWithText()}");
             Thread.Sleep(1500);
             Console.WriteLine($"\t\t{soap.Answer_for_Boy()}");
             Thread.Sleep(1500);
@@ -190,7 +200,7 @@ namespace Story
             Thread.Sleep(1500);
             Console.WriteLine("\t\tИ мочалку, словно галку,");
             Thread.Sleep(1500);
-            Console.WriteLine($"\t\tСловно галку, {crocodyle.ToStringC_0()}.");
+            Console.WriteLine($"\t\tСловно галку, {crocodyle.InteractionWithText()}.");
             Thread.Sleep(1500);
             Console.WriteLine("\t\tА потом как зарычит");
             Thread.Sleep(1500);
