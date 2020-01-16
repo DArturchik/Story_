@@ -1,0 +1,413 @@
+#TopPage
+{
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    background-color: rgb(255, 42, 0);
+    margin: 0px auto;
+    
+}
+    #TopPage h3.TopPageText0
+    {
+        text-align: center;
+        font-size: 25px;
+        padding-top: 60px;
+        margin: 5px;
+    }
+    #TopPage p.TopPageText1
+    {
+        
+        text-align: center;
+        font-size: 18px;
+        margin-top: 5px;
+        
+        
+    }
+    #TopPage hr.TopPageLine0
+    {
+        
+        color: white;
+        size: 5px;
+        width: 30px;
+        
+        background-color: white;
+        background: white;
+        align-content: center;
+    }
+    
+    
+    
+    
+    
+    .TopPageConteiner
+    {
+        padding-top: 40px;
+        height: 200px;
+        width:  100%;
+        display: flex;
+        align-items: stretch;
+        flex-direction: row;
+        
+        
+    }
+    .TopPageConteiner
+    {
+
+        
+        justify-content: center;
+        
+    }
+    
+    .box-1
+    {   
+        height: 200px;
+        width:  200px;
+        background: #f79d9a;
+        
+    }
+    img.TopPageImgTelegram
+    {
+        height: 40px;
+        width: 40px;
+        position: relative;
+        top: 50px;
+        left: 40%;
+
+    }
+    .TopPageText1_2
+    {
+        text-align: center;
+        padding-top: 50px;
+        margin: 0px;
+        font-size: 20px;
+        color: white;
+    }
+    .TopPageText1_3
+    {
+        text-align: center;
+        padding-top: 3px;
+        margin: 0px;
+        font-size: 15px;
+        color: white;
+    }
+    .box-2
+    {
+        
+       
+    }
+    .Img_0
+    {
+        height: 200px;
+        width:  200px;
+    }
+    .TopPageCotainer1
+    {
+        height: 200px;
+        width:  100%;
+        display: flex;
+        align-items: stretch;
+        flex-direction: row;
+    }
+    .TopPageCotainer1
+    {
+        justify-content: center;
+    }   
+
+    #MiddlePage
+    {
+        position: absolute;
+        width: 100%;
+        height: 700px;
+        background-color: rgb(75, 120, 255);
+        top: 700px;
+    }
+    .MiddlePageText0
+    {
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        
+        
+    }
+    .MiddlePageText1
+    {
+        position: absolute;
+        color: white;
+        font-size: 14px;
+        top:  40px;
+        left: 700px;
+        
+    }
+    .MiddlePageRef
+    {
+        position: absolute;
+        top: 80px;
+        left: 740px;
+        
+    }
+    #MiddlePageWindow
+    {
+        width: 600px;
+        height: 400px;
+        position: absolute;  
+        top: 160px;
+        left: 31%;
+        border: none;
+        border-radius: 3px;
+        color: black;
+        background-color: rgb(255, 255, 255);
+        display: none;
+    }
+    #MiddlePageWindow:target
+    {
+        display: block;
+    }
+    input[type=submit]
+    {
+        
+
+    }
+    input[type=submit]:hover
+    {
+        background-color: #ff4901;
+    }
+    .MiddlePageinputSubmit
+    {
+        position: absolute;
+        top: 290px;
+        left: 40%;
+        background-color: rgb(255, 0, 0);
+        color: white;
+        padding: 14px 20px;
+        margin: 8PX 0;
+        border:none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    input[type=text]
+    {
+        
+    }
+    input[type=text]:hover
+    {
+        border-color: red;
+    }
+    .MiddlePageinput0
+    {
+        border: 1px solid rgb(214, 214, 214);
+        border-radius: 3px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        height: 25px;
+        width: 300px;
+
+        position: absolute;
+        top: 100px;
+        left: 21%;
+    }
+    .MiddlePageinput1
+    {
+        border: 1px solid rgb(214, 214, 214);
+        border-radius: 3px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        height: 25px;
+        width: 300px;
+
+        position: absolute;
+        top: 160px;
+        left: 21%;
+    }
+    
+    .MiddlePageinput2
+    {
+        border: 1px solid rgb(214, 214, 214);
+        border-radius: 3px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        height: 25px;
+        width: 300px;
+
+        position: absolute;
+        top: 220px;
+        left: 21%;
+    }
+    .MiddlePageText2
+    {
+        position: absolute;
+        top: 20px;
+        left: 10%;
+        font-size: 14px;
+        color:  rgb(121, 121, 121);
+
+    }
+    .MiddlePageText3
+    {
+        position: absolute;
+        top: 40px;
+        left: 10%;
+        font-size: 14px;
+        color:  rgb(121, 121, 121);
+
+    }
+    .MiddlePageClose
+    {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        height: 50px;
+        width: 50px;
+        color: white;
+
+    }
+    #BottomPage
+    {
+        position: absolute;
+        width: 100%;
+        height: 450px;
+        background-color: rgb(48, 48, 48);
+        top: 1400px;
+    }
+    .BottomPageText0
+    {
+        text-align: center;
+        font-size: 25px;
+        color: white;
+        margin: 0px;
+        padding-top: 80px;
+
+    }
+    .BottomPageImg0
+    {
+        margin: 0px;
+        height: 45px;
+        width: 45px;
+        border: 1px solid rgb(129, 129, 129);
+        border-radius: 2px;
+        position: absolute;
+        top: 120px;
+        left: 650px;
+        
+
+    }
+    .BottomPageImg0:hover
+    {
+        border: 1px solid red;
+    }
+    .BottomPageImg1
+    {
+        margin: 0px;
+        height: 45px;
+        width: 45px;
+        border: 1px solid rgb(129, 129, 129);
+        border-radius: 2px;
+        position: absolute;
+        top: 120px;
+        left: 710px;
+        
+    }
+    .BottomPageImg1:hover
+    {
+        border: 1px solid red;
+    }
+    .BottomPageImg2
+    {
+        margin: 0px;
+        height: 45px;
+        width: 45px;
+        border: 1px solid rgb(129, 129, 129);
+        border-radius: 2px;
+        position: absolute;
+        top: 120px;
+        left: 770px;
+        
+    }
+    .BottomPageImg2:hover
+    {
+        border: 1px solid red;
+    }
+    .BottomPageImg3
+    {
+        
+        margin: 0px;
+        height: 45px;
+        width: 45px;
+        border: 1px solid rgb(129, 129, 129);
+        border-radius: 2px;
+        position: absolute;
+        top: 120px;
+        left: 830px;
+        
+    }
+    .BottomPageImg3:hover
+    {
+        border: 1px solid red;
+    }
+    .BottomPageText1
+    {
+        text-align: center;
+        font-size: 14px;
+        color:  rgb(184, 184, 184);
+        margin: 0px;
+        padding-top: 90px;
+    }
+    .BottomPageInput0
+    {
+        border: 1px solid rgb(109, 109, 109);
+        border-radius: 2px;
+        
+        height: 40px;
+        width: 600px;
+
+        margin: 0px;
+        padding: 0px;
+        position: absolute;
+        top: 260px;
+        left: 30%;
+        color: white;
+        background-color: rgb(109, 109, 109);
+        
+    }
+    .BottomPageInput0::placeholder
+    {
+        padding-left: 20px;
+        color: white;
+    }
+    .BottomPageSubmit
+    {
+        border: 1px solid rgb(109, 109, 109);
+        border-radius: 2px;
+        
+        height: 40px;
+        width: 140px;
+
+        margin: 0px;
+        padding: 0px;
+        position: absolute;
+        top: 330px;
+        left: 45%;
+        color: white;
+        background-color: rgb(48, 48, 48);
+    }
+    .BottomPageSubmit::placeholder
+    {
+        font-size: 18px;
+        color: white;
+    }
+    #FinishPage
+    {
+        width: 100%;
+        height: 50px;
+        background-color: rgb(109, 109, 109);
+        position: absolute;
+        top: 1850px;
+
+    }
+    .FinishPageText0
+    {
+        text-align: center;
+        margin: 0px;
+        padding-top: 15px;
+        color: white;
+        font-size: 15px;
+    }
